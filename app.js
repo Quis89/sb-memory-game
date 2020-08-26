@@ -53,7 +53,8 @@ function handleCardClick(event) {
 
 	let target = event.target;
 	let targetColor = target.classList[0];
-	target.style.backgroundColor = targetColor;
+
+	target.style.background = targetColor;
 
 	if (!card1 || !card2) {
 		target.classList.add('flipped');
@@ -82,8 +83,8 @@ function handleCardClick(event) {
 createDivsForColors(shuffledColors);
 
 function timeOutReset() {
-	card1.style.backgroundColor = '';
-	card2.style.backgroundColor = '';
+	card1.style.background = '';
+	card2.style.background = '';
 	card1.classList.remove('flipped');
 	card2.classList.remove('flipped');
 	init();
